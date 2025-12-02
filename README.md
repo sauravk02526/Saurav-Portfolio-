@@ -24,7 +24,7 @@ A modern, responsive portfolio website showcasing the work and skills of Saurav 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https:/sauravk02526/github.com//portfolio.git
 ```
 
 2. Navigate to the project directory:
@@ -71,7 +71,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 Saurav Kamble
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
-- Twitter: [Your Twitter Profile] 
+- Email:sauravk02526@gamil.com
+- LinkedIn: [https://www.linkedin.com/in/saurav-kamble-829500227/]
+- GitHub: [https://github.com/sauravk02526]
