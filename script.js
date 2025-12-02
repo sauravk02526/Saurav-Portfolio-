@@ -26,22 +26,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+// // Form Submission
+// const contactForm = document.querySelector('.contact-form');
+// contactForm.addEventListener('submit', function(e) {
+//     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
+//     // Get form data
+//     const formData = new FormData(this);
+//     const data = Object.fromEntries(formData);
     
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', data);
-    
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    this.reset();
+//     // Here you would typically send the data to a server
+//   //  console.log('Form submitted:', data);
+    const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    status.innerHTML = "Thank you! Your message has been sent successfully.";
+    status.style.color = "green";
+    form.reset();
+  } else {
+    status.innerHTML = "Oops! Something went wrong. Please try again.";
+    status.style.color = "red";
+  }
 });
+
+//     // Show success message
+//     alert('Thank you for your message! I will get back to you soon.');
+//     this.reset();
+// });
 
 // Scroll Animation for Elements
 const observerOptions = {
